@@ -7,11 +7,11 @@
 
 var indexSectionsWithContent =
 {
-  0: "$_dekoprtv",
+  0: "$_degkoprtv",
   1: "eop",
-  2: "etv",
-  3: "ertv",
-  4: "_detv",
+  2: "eptv",
+  3: "eprtv",
+  4: "_degtv",
   5: "$eko",
   6: "r"
 };

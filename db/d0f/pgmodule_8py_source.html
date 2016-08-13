@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>SocialCollectorBot: Файл vkmodule.py</title>
+<title>SocialCollectorBot: Исходный файл pgmodule.py</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('d7/d3e/vkmodule_8py.html','../../');});
+$(document).ready(function(){initNavTree('db/d0f/pgmodule_8py_source.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -89,48 +89,31 @@ $(document).ready(function(){initNavTree('d7/d3e/vkmodule_8py.html','../../');})
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Пространства имен</a> &#124;
-<a href="#func-members">Функции</a>  </div>
   <div class="headertitle">
-<div class="title">Файл vkmodule.py</div>  </div>
+<div class="title">pgmodule.py</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Модуль для работы с социальной сетью ВКонтакте  
-<a href="#details">Подробнее...</a></p>
-
-<p><a href="../../d7/d3e/vkmodule_8py_source.html">См. исходные тексты.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Пространства имен</h2></td></tr>
-<tr class="memitem:d4/d21/namespacevkmodule"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/namespacevkmodule.html">vkmodule</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Функции</h2></td></tr>
-<tr class="memitem:a77688bd07e405e44e1361263ed109894"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/namespacevkmodule.html#a77688bd07e405e44e1361263ed109894">vkmodule.vkauthstr</a></td></tr>
-<tr class="memdesc:a77688bd07e405e44e1361263ed109894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод генерации ссылки для авторизации в ВК  <a href="#a77688bd07e405e44e1361263ed109894">Подробнее...</a><br/></td></tr>
-<tr class="separator:a77688bd07e405e44e1361263ed109894"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acefb28af1e50b99a5c189a164c690f6b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/namespacevkmodule.html#acefb28af1e50b99a5c189a164c690f6b">vkmodule.vkfriends</a></td></tr>
-<tr class="memdesc:acefb28af1e50b99a5c189a164c690f6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод для получения списка друзей  <a href="#acefb28af1e50b99a5c189a164c690f6b">Подробнее...</a><br/></td></tr>
-<tr class="separator:acefb28af1e50b99a5c189a164c690f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17e889ffb7473771c2cc771ab54c49b0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/namespacevkmodule.html#a17e889ffb7473771c2cc771ab54c49b0">vkmodule.vkwall</a></td></tr>
-<tr class="memdesc:a17e889ffb7473771c2cc771ab54c49b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод для получения записей со стены пользователей  <a href="#a17e889ffb7473771c2cc771ab54c49b0">Подробнее...</a><br/></td></tr>
-<tr class="separator:a17e889ffb7473771c2cc771ab54c49b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Модуль для работы с социальной сетью ВКонтакте </p>
-<dl class="section author"><dt>Авторы</dt><dd>Борис Бочкарев <a href="http://vk.com/id23382988">http://vk.com/id23382988</a> </dd></dl>
-<dl class="section version"><dt>Версия</dt><dd>0.1 </dd></dl>
-
-<p>См. определение в файле <a class="el" href="../../d7/d3e/vkmodule_8py_source.html">vkmodule.py</a></p>
-</div></div><!-- contents -->
+<a href="../../db/d0f/pgmodule_8py.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="../../d7/d0f/namespacepgmodule.html">    1</a></span>&#160;<span class="comment"># -*- coding: utf-8 -*-</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> psycopg2,sys,config</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">## Метод для получения токена</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d7/d0f/namespacepgmodule.html#ade787b4c385e0f208b11eb004da1896b">    5</a></span>&#160;<span class="keyword">def </span><a class="code" href="../../d7/d0f/namespacepgmodule.html#ade787b4c385e0f208b11eb004da1896b">getToken</a>(id_chat, social):</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordflow">if</span> social == <span class="stringliteral">&#39;vk&#39;</span>:</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        connect = psycopg2.connect(user=config.userDB, password=config.passwordDB, host=<span class="stringliteral">&#39;127.0.0.1&#39;</span>, database=<span class="stringliteral">&#39;socialcollector&#39;</span>, port=5432)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        cursor = connect.cursor()</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        cursor.execute(<span class="stringliteral">&quot;SELECT token FROM users WHERE id_chat = &#39;&quot;</span>+str(id_chat)+<span class="stringliteral">&quot;&#39;&quot;</span>)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        result = cursor.fetchone()[0]</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        connect.close()</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">return</span> result</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&#39;error&#39;</span></div>
+<div class="ttc" id="namespacepgmodule_html_ade787b4c385e0f208b11eb004da1896b"><div class="ttname"><a href="../../d7/d0f/namespacepgmodule.html#ade787b4c385e0f208b11eb004da1896b">pgmodule.getToken</a></div><div class="ttdeci">def getToken</div><div class="ttdoc">Метод для получения токена </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d0f/pgmodule_8py_source.html#l00005">pgmodule.py:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/d3e/vkmodule_8py.html">vkmodule.py</a></li>
+    <li class="navelem"><a class="el" href="../../db/d0f/pgmodule_8py.html">pgmodule.py</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
