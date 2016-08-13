@@ -128,19 +128,27 @@ $(document).ready(function(){initNavTree('d7/d0f/namespacepgmodule.html','../../
 </div><div class="memdoc">
 
 <p>Метод для получения токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id_chat</td><td>ID чата из Telegram </td></tr>
+    <tr><td class="paramname">social</td><td>Социальная сеть, например 'vk' </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Токен для данной социальной сети данного чата </dd></dl>
 
-<p>См. определение в файле <a class="el" href="../../db/d0f/pgmodule_8py_source.html">pgmodule.py</a> строка <a class="el" href="../../db/d0f/pgmodule_8py_source.html#l00005">5</a></p>
-<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d7/d0f/namespacepgmodule.html#ade787b4c385e0f208b11eb004da1896b">    5</a></span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">def </span><a class="code" href="../../d7/d0f/namespacepgmodule.html#ade787b4c385e0f208b11eb004da1896b">getToken</a>(id_chat, social):</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">if</span> social == <span class="stringliteral">&#39;vk&#39;</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        connect = psycopg2.connect(user=config.userDB, password=config.passwordDB, host=<span class="stringliteral">&#39;127.0.0.1&#39;</span>, database=<span class="stringliteral">&#39;socialcollector&#39;</span>, port=5432)</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        cursor = connect.cursor()</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        cursor.execute(<span class="stringliteral">&quot;SELECT token FROM users WHERE id_chat = &#39;&quot;</span>+str(id_chat)+<span class="stringliteral">&quot;&#39;&quot;</span>)</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        result = cursor.fetchone()[0]</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        connect.close()</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">return</span> result</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">else</span>:</div>
-       <span class="keywordflow">return</span> <span class="stringliteral">&#39;error&#39;</span><div class="ttc" id="namespacepgmodule_html_ade787b4c385e0f208b11eb004da1896b"><div class="ttname"><a href="../../d7/d0f/namespacepgmodule.html#ade787b4c385e0f208b11eb004da1896b">pgmodule.getToken</a></div><div class="ttdeci">def getToken</div><div class="ttdoc">Метод для получения токена </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d0f/pgmodule_8py_source.html#l00005">pgmodule.py:5</a></div></div>
+<p>См. определение в файле <a class="el" href="../../db/d0f/pgmodule_8py_source.html">pgmodule.py</a> строка <a class="el" href="../../db/d0f/pgmodule_8py_source.html#l00015">15</a></p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d7/d0f/namespacepgmodule.html#ade787b4c385e0f208b11eb004da1896b">   15</a></span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">def </span><a class="code" href="../../d7/d0f/namespacepgmodule.html#ade787b4c385e0f208b11eb004da1896b">getToken</a>(id_chat, social):</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span> social == <span class="stringliteral">&#39;vk&#39;</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        connect = psycopg2.connect(user=config.userDB, password=config.passwordDB, host=<span class="stringliteral">&#39;127.0.0.1&#39;</span>, database=<span class="stringliteral">&#39;socialcollector&#39;</span>, port=5432)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        cursor = connect.cursor()</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        cursor.execute(<span class="stringliteral">&quot;SELECT token FROM users WHERE id_chat = &#39;&quot;</span>+str(id_chat)+<span class="stringliteral">&quot;&#39;&quot;</span>)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        result = cursor.fetchone()[0]</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        connect.close()</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> result</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">else</span>:</div>
+       <span class="keywordflow">return</span> <span class="stringliteral">&#39;error&#39;</span><div class="ttc" id="namespacepgmodule_html_ade787b4c385e0f208b11eb004da1896b"><div class="ttname"><a href="../../d7/d0f/namespacepgmodule.html#ade787b4c385e0f208b11eb004da1896b">pgmodule.getToken</a></div><div class="ttdeci">def getToken</div><div class="ttdoc">Метод для получения токена </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d0f/pgmodule_8py_source.html#l00015">pgmodule.py:15</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
