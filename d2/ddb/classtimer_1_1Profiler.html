@@ -98,6 +98,9 @@ $(document).ready(function(){initNavTree('d2/ddb/classtimer_1_1Profiler.html','.
 <div class="title">Класс timer.Profiler</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Класс позволяет засекать время выполнения блока кода  
+ <a href="../../d2/ddb/classtimer_1_1Profiler.html#details">Подробнее...</a></p>
 <div class="dynheader">
 Граф наследования:timer.Profiler:</div>
 <div class="dyncontent">
@@ -116,13 +119,16 @@ $(document).ready(function(){initNavTree('d2/ddb/classtimer_1_1Profiler.html','.
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:a7e614bfc69cdc93a6a9ff52cda98dfa1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddb/classtimer_1_1Profiler.html#a7e614bfc69cdc93a6a9ff52cda98dfa1">__enter__</a> (self)</td></tr>
+<tr class="memdesc:a7e614bfc69cdc93a6a9ff52cda98dfa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализируется в момент захода в нужный участок кода  <a href="#a7e614bfc69cdc93a6a9ff52cda98dfa1">Подробнее...</a><br /></td></tr>
 <tr class="separator:a7e614bfc69cdc93a6a9ff52cda98dfa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a99feb686eef0b16fed9b622ffc5fa7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddb/classtimer_1_1Profiler.html#a3a99feb686eef0b16fed9b622ffc5fa7">__exit__</a> (self, type, value, traceback)</td></tr>
+<tr class="memdesc:a3a99feb686eef0b16fed9b622ffc5fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запускается при выходе из участка кода  <a href="#a3a99feb686eef0b16fed9b622ffc5fa7">Подробнее...</a><br /></td></tr>
 <tr class="separator:a3a99feb686eef0b16fed9b622ffc5fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock">
-<p>См. определение в файле <a class="el" href="../../d8/d9a/timer_8py_source.html">timer.py</a> строка <a class="el" href="../../d8/d9a/timer_8py_source.html#l00004">4</a></p>
+<div class="textblock"><p>Класс позволяет засекать время выполнения блока кода </p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">from</span> timers.timer <span class="keyword">import</span> Profiler</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;with Profiler() <span class="keyword">as</span> p:</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;   <span class="comment">#some Code</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;\encode </div></div><!-- fragment -->
+<p>См. определение в файле <a class="el" href="../../d8/d9a/timer_8py_source.html">timer.py</a> строка <a class="el" href="../../d8/d9a/timer_8py_source.html#l00011">11</a></p>
 </div><h2 class="groupheader">Методы</h2>
 <a class="anchor" id="a7e614bfc69cdc93a6a9ff52cda98dfa1"></a>
 <div class="memitem">
@@ -138,9 +144,11 @@ $(document).ready(function(){initNavTree('d2/ddb/classtimer_1_1Profiler.html','.
       </table>
 </div><div class="memdoc">
 
-<p>См. определение в файле <a class="el" href="../../d8/d9a/timer_8py_source.html">timer.py</a> строка <a class="el" href="../../d8/d9a/timer_8py_source.html#l00005">5</a></p>
-<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d2/ddb/classtimer_1_1Profiler.html#a7e614bfc69cdc93a6a9ff52cda98dfa1">    5</a></span>&#160;    <span class="keyword">def </span><a class="code" href="../../d2/ddb/classtimer_1_1Profiler.html#a7e614bfc69cdc93a6a9ff52cda98dfa1">__enter__</a>(self):</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        self.<a class="code" href="../../d2/ddb/classtimer_1_1Profiler.html#a8580c202cefe3d120ab69030e65414a1">_startTime</a> = time.time()</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="ttc" id="classtimer_1_1Profiler_html_a7e614bfc69cdc93a6a9ff52cda98dfa1"><div class="ttname"><a href="../../d2/ddb/classtimer_1_1Profiler.html#a7e614bfc69cdc93a6a9ff52cda98dfa1">timer.Profiler.__enter__</a></div><div class="ttdeci">def __enter__(self)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d9a/timer_8py_source.html#l00005">timer.py:5</a></div></div>
-<div class="ttc" id="classtimer_1_1Profiler_html_a8580c202cefe3d120ab69030e65414a1"><div class="ttname"><a href="../../d2/ddb/classtimer_1_1Profiler.html#a8580c202cefe3d120ab69030e65414a1">timer.Profiler._startTime</a></div><div class="ttdeci">_startTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d9a/timer_8py_source.html#l00006">timer.py:6</a></div></div>
+<p>Инициализируется в момент захода в нужный участок кода </p>
+
+<p>См. определение в файле <a class="el" href="../../d8/d9a/timer_8py_source.html">timer.py</a> строка <a class="el" href="../../d8/d9a/timer_8py_source.html#l00013">13</a></p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d2/ddb/classtimer_1_1Profiler.html#a7e614bfc69cdc93a6a9ff52cda98dfa1">   13</a></span>&#160;    <span class="keyword">def </span><a class="code" href="../../d2/ddb/classtimer_1_1Profiler.html#a7e614bfc69cdc93a6a9ff52cda98dfa1">__enter__</a>(self):</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        self.<a class="code" href="../../d2/ddb/classtimer_1_1Profiler.html#a8580c202cefe3d120ab69030e65414a1">_startTime</a> = time.time()</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="ttc" id="classtimer_1_1Profiler_html_a7e614bfc69cdc93a6a9ff52cda98dfa1"><div class="ttname"><a href="../../d2/ddb/classtimer_1_1Profiler.html#a7e614bfc69cdc93a6a9ff52cda98dfa1">timer.Profiler.__enter__</a></div><div class="ttdeci">def __enter__(self)</div><div class="ttdoc">Инициализируется в момент захода в нужный участок кода </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d9a/timer_8py_source.html#l00013">timer.py:13</a></div></div>
+<div class="ttc" id="classtimer_1_1Profiler_html_a8580c202cefe3d120ab69030e65414a1"><div class="ttname"><a href="../../d2/ddb/classtimer_1_1Profiler.html#a8580c202cefe3d120ab69030e65414a1">timer.Profiler._startTime</a></div><div class="ttdeci">_startTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d9a/timer_8py_source.html#l00014">timer.py:14</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -180,9 +188,10 @@ $(document).ready(function(){initNavTree('d2/ddb/classtimer_1_1Profiler.html','.
       </table>
 </div><div class="memdoc">
 
-<p>См. определение в файле <a class="el" href="../../d8/d9a/timer_8py_source.html">timer.py</a> строка <a class="el" href="../../d8/d9a/timer_8py_source.html#l00008">8</a></p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d2/ddb/classtimer_1_1Profiler.html#a3a99feb686eef0b16fed9b622ffc5fa7">    8</a></span>&#160;    <span class="keyword">def </span><a class="code" href="../../d2/ddb/classtimer_1_1Profiler.html#a3a99feb686eef0b16fed9b622ffc5fa7">__exit__</a>(self, type, value, traceback):</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        print(<span class="stringliteral">&quot;Elapsed time: {:.3f} sec&quot;</span>.format(time.time() - self.<a class="code" href="../../d2/ddb/classtimer_1_1Profiler.html#a8580c202cefe3d120ab69030e65414a1">_startTime</a>))</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="ttc" id="classtimer_1_1Profiler_html_a3a99feb686eef0b16fed9b622ffc5fa7"><div class="ttname"><a href="../../d2/ddb/classtimer_1_1Profiler.html#a3a99feb686eef0b16fed9b622ffc5fa7">timer.Profiler.__exit__</a></div><div class="ttdeci">def __exit__(self, type, value, traceback)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d9a/timer_8py_source.html#l00008">timer.py:8</a></div></div>
-<div class="ttc" id="classtimer_1_1Profiler_html_a8580c202cefe3d120ab69030e65414a1"><div class="ttname"><a href="../../d2/ddb/classtimer_1_1Profiler.html#a8580c202cefe3d120ab69030e65414a1">timer.Profiler._startTime</a></div><div class="ttdeci">_startTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d9a/timer_8py_source.html#l00006">timer.py:6</a></div></div>
+<p>Запускается при выходе из участка кода </p>
+
+<p>См. определение в файле <a class="el" href="../../d8/d9a/timer_8py_source.html">timer.py</a> строка <a class="el" href="../../d8/d9a/timer_8py_source.html#l00017">17</a></p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d2/ddb/classtimer_1_1Profiler.html#a3a99feb686eef0b16fed9b622ffc5fa7">   17</a></span>&#160;    <span class="keyword">def </span><a class="code" href="../../d2/ddb/classtimer_1_1Profiler.html#a3a99feb686eef0b16fed9b622ffc5fa7">__exit__</a>(self, type, value, traceback):</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        print(<span class="stringliteral">&quot;Elapsed time: {:.3f}<div class="ttc" id="classtimer_1_1Profiler_html_a3a99feb686eef0b16fed9b622ffc5fa7"><div class="ttname"><a href="../../d2/ddb/classtimer_1_1Profiler.html#a3a99feb686eef0b16fed9b622ffc5fa7">timer.Profiler.__exit__</a></div><div class="ttdeci">def __exit__(self, type, value, traceback)</div><div class="ttdoc">Запускается при выходе из участка кода </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d9a/timer_8py_source.html#l00017">timer.py:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

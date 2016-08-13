@@ -6,7 +6,6 @@ var NAVTREE =
       [ "Пакеты", "namespaces.html", "namespaces" ],
       [ "Функции с областью видимости пакета", "namespacemembers.html", [
         [ "Указатель", "namespacemembers.html", null ],
-        [ "Функции", "namespacemembers_func.html", null ],
         [ "Переменные", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
