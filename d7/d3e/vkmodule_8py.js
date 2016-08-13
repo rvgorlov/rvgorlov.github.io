@@ -1,5 +1,6 @@
 var vkmodule_8py =
 [
-    [ "api", "d7/d3e/vkmodule_8py.html#a93f96a39e994d124cd5ecedb00cdd9fa", null ],
-    [ "session", "d7/d3e/vkmodule_8py.html#ad90ffd08b9c136a3aa59ecf6ab0b2967", null ]
+    [ "vkauthstr", "d7/d3e/vkmodule_8py.html#a77688bd07e405e44e1361263ed109894", null ],
+    [ "vkfriends", "d7/d3e/vkmodule_8py.html#acefb28af1e50b99a5c189a164c690f6b", null ],
+    [ "vkwall", "d7/d3e/vkmodule_8py.html#a17e889ffb7473771c2cc771ab54c49b0", null ]
 ];
