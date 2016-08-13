@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>SocialCollectorBot: Исходный файл encryption/EncDES.py</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SocialCollectorBot
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Бот для Telegram</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d5/dca/EncDES_8py_source.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">EncDES.py</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/dca/EncDES_8py.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="../../d7/dc9/namespaceEncDES.html">    1</a></span>&#160;<span class="keyword">from</span> Crypto.Cipher <span class="keyword">import</span> DES</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="../../d0/d9e/classEncDES_1_1EncDES.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/d9e/classEncDES_1_1EncDES.html">EncDES</a>:</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="comment"># конструктор с задание ключа шифрования</span></div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../d0/d9e/classEncDES_1_1EncDES.html#af983110b17c70941506818ccc3a796ba">    6</a></span>&#160;    <span class="keyword">def </span><a class="code" href="../../d0/d9e/classEncDES_1_1EncDES.html#af983110b17c70941506818ccc3a796ba">__init__</a>(self):</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../d0/d9e/classEncDES_1_1EncDES.html#ab3265f1d923c0f564e1499eea4125209">    7</a></span>&#160;        self.<a class="code" href="../../d0/d9e/classEncDES_1_1EncDES.html#ab3265f1d923c0f564e1499eea4125209">obj</a> = DES.new(<span class="stringliteral">&#39;axmorsup&#39;</span>, DES.MODE_ECB)</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment"># шифрование</span></div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d0/d9e/classEncDES_1_1EncDES.html#a4f478befbdbbd5d29d494e0dbcfd3b9b">   10</a></span>&#160;    <span class="keyword">def </span><a class="code" href="../../d0/d9e/classEncDES_1_1EncDES.html#a4f478befbdbbd5d29d494e0dbcfd3b9b">encode</a>(self,text):</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        flag = 0</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">while</span> len(text) % 8 != 7:</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            text += <span class="stringliteral">&quot;H&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            flag += 1</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        resText = str(flag) + text</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> self.obj.encrypt(resText)</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment"># расшифровка</span></div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d0/d9e/classEncDES_1_1EncDES.html#aed0aa2f1e2065f84275f35f70cafb9e2">   19</a></span>&#160;    <span class="keyword">def </span><a class="code" href="../../d0/d9e/classEncDES_1_1EncDES.html#aed0aa2f1e2065f84275f35f70cafb9e2">decode</a>(self,code):</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        text = self.obj.decrypt(code)</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        num = text[0] - 48</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        tail = len(text) - num</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> text[1:tail].<a class="code" href="../../d0/d9e/classEncDES_1_1EncDES.html#aed0aa2f1e2065f84275f35f70cafb9e2">decode</a>(<span class="stringliteral">&quot;utf-8&quot;</span>)</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordflow">if</span> __name__ == <span class="stringliteral">&quot;__main__&quot;</span>:</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    with Timer() <span class="keyword">as</span> t:</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d7/dc9/namespaceEncDES.html#a89650a99db0b8ada49cac3b7c798166c">   27</a></span>&#160;    obj = <a class="code" href="../../d0/d9e/classEncDES_1_1EncDES.html">EncDES</a>()</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d7/dc9/namespaceEncDES.html#a39fd9aa441d32b1fb010561d586d49b6">   28</a></span>&#160;    code = obj.encode(<span class="stringliteral">&quot;Hello World&quot;</span>)</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d7/dc9/namespaceEncDES.html#aaa85faabe6168c0e3ababbb17a9ed1b4">   29</a></span>&#160;    res = obj.decode(code)</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    print(res)</div><div class="ttc" id="classEncDES_1_1EncDES_html_af983110b17c70941506818ccc3a796ba"><div class="ttname"><a href="../../d0/d9e/classEncDES_1_1EncDES.html#af983110b17c70941506818ccc3a796ba">EncDES.EncDES.__init__</a></div><div class="ttdeci">def __init__(self)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dca/EncDES_8py_source.html#l00006">EncDES.py:6</a></div></div>
+<div class="ttc" id="classEncDES_1_1EncDES_html"><div class="ttname"><a href="../../d0/d9e/classEncDES_1_1EncDES.html">EncDES.EncDES</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dca/EncDES_8py_source.html#l00004">EncDES.py:4</a></div></div>
+<div class="ttc" id="classEncDES_1_1EncDES_html_a4f478befbdbbd5d29d494e0dbcfd3b9b"><div class="ttname"><a href="../../d0/d9e/classEncDES_1_1EncDES.html#a4f478befbdbbd5d29d494e0dbcfd3b9b">EncDES.EncDES.encode</a></div><div class="ttdeci">def encode(self, text)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dca/EncDES_8py_source.html#l00010">EncDES.py:10</a></div></div>
+<div class="ttc" id="classEncDES_1_1EncDES_html_ab3265f1d923c0f564e1499eea4125209"><div class="ttname"><a href="../../d0/d9e/classEncDES_1_1EncDES.html#ab3265f1d923c0f564e1499eea4125209">EncDES.EncDES.obj</a></div><div class="ttdeci">obj</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dca/EncDES_8py_source.html#l00007">EncDES.py:7</a></div></div>
+<div class="ttc" id="classEncDES_1_1EncDES_html_aed0aa2f1e2065f84275f35f70cafb9e2"><div class="ttname"><a href="../../d0/d9e/classEncDES_1_1EncDES.html#aed0aa2f1e2065f84275f35f70cafb9e2">EncDES.EncDES.decode</a></div><div class="ttdeci">def decode(self, code)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dca/EncDES_8py_source.html#l00019">EncDES.py:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_e6f4918c8d7b02fe17aece42e2c96ac2.html">encryption</a></li><li class="navelem"><a class="el" href="../../d5/dca/EncDES_8py.html">EncDES.py</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>
