@@ -21,11 +21,7 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Файлы", null, [
-      [ "Файлы", "files.html", "files" ],
-      [ "Список членов всех файлов", "globals.html", [
-        [ "Указатель", "globals.html", null ],
-        [ "Переменные", "globals_vars.html", null ]
-      ] ]
+      [ "Файлы", "files.html", "files" ]
     ] ]
   ] ]
 ];

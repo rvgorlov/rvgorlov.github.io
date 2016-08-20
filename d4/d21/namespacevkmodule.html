@@ -107,6 +107,15 @@ $(document).ready(function(){initNavTree('d4/d21/namespacevkmodule.html','../../
 <tr class="memitem:a17e889ffb7473771c2cc771ab54c49b0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/namespacevkmodule.html#a17e889ffb7473771c2cc771ab54c49b0">vkwall</a></td></tr>
 <tr class="memdesc:a17e889ffb7473771c2cc771ab54c49b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод для получения записей со стены пользователей  <a href="#a17e889ffb7473771c2cc771ab54c49b0">Подробнее...</a><br/></td></tr>
 <tr class="separator:a17e889ffb7473771c2cc771ab54c49b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e2080070f3b36ddf40e2b366a0ff5f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/namespacevkmodule.html#a65e2080070f3b36ddf40e2b366a0ff5f">vknewmsg</a></td></tr>
+<tr class="memdesc:a65e2080070f3b36ddf40e2b366a0ff5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод для получения новых сообщений  <a href="#a65e2080070f3b36ddf40e2b366a0ff5f">Подробнее...</a><br/></td></tr>
+<tr class="separator:a65e2080070f3b36ddf40e2b366a0ff5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8cf385b420326d00168013f3e49c115"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/namespacevkmodule.html#ab8cf385b420326d00168013f3e49c115">vkfio</a></td></tr>
+<tr class="memdesc:ab8cf385b420326d00168013f3e49c115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод для получения Ф.  <a href="#ab8cf385b420326d00168013f3e49c115">Подробнее...</a><br/></td></tr>
+<tr class="separator:ab8cf385b420326d00168013f3e49c115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18fc6e5f11d931ffe498bb34500ae930"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/namespacevkmodule.html#a18fc6e5f11d931ffe498bb34500ae930">vksend</a></td></tr>
+<tr class="memdesc:a18fc6e5f11d931ffe498bb34500ae930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод для отправки сообщения  <a href="#a18fc6e5f11d931ffe498bb34500ae930">Подробнее...</a><br/></td></tr>
+<tr class="separator:a18fc6e5f11d931ffe498bb34500ae930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
 <a class="anchor" id="a77688bd07e405e44e1361263ed109894"></a>
@@ -133,13 +142,53 @@ $(document).ready(function(){initNavTree('d4/d21/namespacevkmodule.html','../../
 <dl class="section return"><dt>Возвращает</dt><dd>Ссылку для авторизации в текстовом виде </dd></dl>
 
 <p>См. определение в файле <a class="el" href="../../d7/d3e/vkmodule_8py_source.html">vkmodule.py</a> строка <a class="el" href="../../d7/d3e/vkmodule_8py_source.html#l00014">14</a></p>
+
+<p>Используется в <a class="el" href="../../da/d6a/bot_8py_source.html#l00023">bot.sendmessage()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d4/d21/namespacevkmodule.html#a77688bd07e405e44e1361263ed109894">   14</a></span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">def </span><a class="code" href="../../d4/d21/namespacevkmodule.html#a77688bd07e405e44e1361263ed109894">vkauthstr</a>(chat_id):</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    textMsg = <span class="stringliteral">&#39;&#39;&#39;Для авторизации в ВК вам необходимо пройти по ссылке:\n</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">    http://oauth.vk.com/authorize?client_id=&#39;&#39;&#39;</span>+str(config.idAppVK)+<span class="stringliteral">&#39;&#39;&#39;&amp;scope=friends&amp;redirect_uri=http://y909539n.bget.ru/vkauth.php&amp;display=mobile&amp;response_type=token&amp;state=&#39;&#39;&#39;</span>+str(chat_id)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> textMsg</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    textMsg = <span class="stringliteral">&#39;&#39;&#39;Для авторизации в ВК вам необходимо пройти по ссылке:\n\n</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">    https://oauth.vk.com/authorize?client_id=5558925&amp;display=page&amp;redirect_uri=https://oauth.vk.com/blank.html&amp;scope=friends,messages&amp;response_type=token&amp;v=5.53\n\n</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="stringliteral">    и отправить итоговую ссылку мне&#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span> textMsg</div>
 </div>
 <div class="ttc" id="namespacevkmodule_html_a77688bd07e405e44e1361263ed109894"><div class="ttname"><a href="../../d4/d21/namespacevkmodule.html#a77688bd07e405e44e1361263ed109894">vkmodule.vkauthstr</a></div><div class="ttdeci">def vkauthstr</div><div class="ttdoc">Метод генерации ссылки для авторизации в ВК </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d3e/vkmodule_8py_source.html#l00014">vkmodule.py:14</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab8cf385b420326d00168013f3e49c115"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def vkmodule.vkfio </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод для получения Ф. </p>
+<p>И. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ID пользователя в ВК </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка вида "Фамилия Имя" </dd></dl>
+
+<p>См. определение в файле <a class="el" href="../../d7/d3e/vkmodule_8py_source.html">vkmodule.py</a> строка <a class="el" href="../../d7/d3e/vkmodule_8py_source.html#l00063">63</a></p>
+
+<p>Используется в <a class="el" href="../../da/d6a/bot_8py_source.html#l00023">bot.sendmessage()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d4/d21/namespacevkmodule.html#ab8cf385b420326d00168013f3e49c115">   63</a></span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">def </span><a class="code" href="../../d4/d21/namespacevkmodule.html#ab8cf385b420326d00168013f3e49c115">vkfio</a>(id):</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    response = requests.get(<span class="stringliteral">&quot;https://api.vk.com/method/users.get?user_ids=&quot;</span>+str(id)+<span class="stringliteral">&quot;&amp;name_case=Nom&quot;</span>)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    arrayResp = json.loads(response.content.decode(<span class="stringliteral">&quot;UTF-8&quot;</span>))[<span class="stringliteral">&quot;response&quot;</span>]</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> arrayResp[0][<span class="stringliteral">&#39;last_name&#39;</span>] + <span class="stringliteral">&quot; &quot;</span> + arrayResp[0][<span class="stringliteral">&#39;first_name&#39;</span>]</div>
+</div>
+<div class="ttc" id="namespacevkmodule_html_ab8cf385b420326d00168013f3e49c115"><div class="ttname"><a href="../../d4/d21/namespacevkmodule.html#ab8cf385b420326d00168013f3e49c115">vkmodule.vkfio</a></div><div class="ttdeci">def vkfio</div><div class="ttdoc">Метод для получения Ф. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d3e/vkmodule_8py_source.html#l00063">vkmodule.py:63</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -166,18 +215,107 @@ $(document).ready(function(){initNavTree('d4/d21/namespacevkmodule.html','../../
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>Список всех друзей со списками вида: [id_пользователя,Фамилия,Имя] </dd></dl>
 
-<p>См. определение в файле <a class="el" href="../../d7/d3e/vkmodule_8py_source.html">vkmodule.py</a> строка <a class="el" href="../../d7/d3e/vkmodule_8py_source.html#l00023">23</a></p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d4/d21/namespacevkmodule.html#acefb28af1e50b99a5c189a164c690f6b">   23</a></span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">def </span><a class="code" href="../../d4/d21/namespacevkmodule.html#acefb28af1e50b99a5c189a164c690f6b">vkfriends</a>(token):</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    response = requests.get(<span class="stringliteral">&quot;https://api.vk.com/method/friends.get?access_token=&quot;</span>+str(token)+<span class="stringliteral">&quot;&amp;offset=0&amp;order=name&amp;fields=[name]&amp;name_case=nom&quot;</span>)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    arrayResp = json.loads(response.content.decode(<span class="stringliteral">&quot;UTF-8&quot;</span>))[<span class="stringliteral">&quot;response&quot;</span>]</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    friends = []</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">for</span> friend <span class="keywordflow">in</span> arrayResp:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        localArray = [friend[<span class="stringliteral">&quot;uid&quot;</span>],friend[<span class="stringliteral">&quot;first_name&quot;</span>],friend[<span class="stringliteral">&quot;last_name&quot;</span>]]</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        friends.append(localArray)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> friends </div>
+<p>См. определение в файле <a class="el" href="../../d7/d3e/vkmodule_8py_source.html">vkmodule.py</a> строка <a class="el" href="../../d7/d3e/vkmodule_8py_source.html#l00024">24</a></p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d4/d21/namespacevkmodule.html#acefb28af1e50b99a5c189a164c690f6b">   24</a></span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">def </span><a class="code" href="../../d4/d21/namespacevkmodule.html#acefb28af1e50b99a5c189a164c690f6b">vkfriends</a>(token):</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    response = requests.get(<span class="stringliteral">&quot;https://api.vk.com/method/friends.get?access_token=&quot;</span>+str(token)+<span class="stringliteral">&quot;&amp;offset=0&amp;order=name&amp;fields=[name]&amp;name_case=nom&quot;</span>)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    arrayResp = json.loads(response.content.decode(<span class="stringliteral">&quot;UTF-8&quot;</span>))[<span class="stringliteral">&quot;response&quot;</span>]</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    friends = []</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">for</span> friend <span class="keywordflow">in</span> arrayResp:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        localArray = [friend[<span class="stringliteral">&quot;uid&quot;</span>],friend[<span class="stringliteral">&quot;first_name&quot;</span>],friend[<span class="stringliteral">&quot;last_name&quot;</span>]]</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        friends.append(localArray)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> friends </div>
 </div>
-<div class="ttc" id="namespacevkmodule_html_acefb28af1e50b99a5c189a164c690f6b"><div class="ttname"><a href="../../d4/d21/namespacevkmodule.html#acefb28af1e50b99a5c189a164c690f6b">vkmodule.vkfriends</a></div><div class="ttdeci">def vkfriends</div><div class="ttdoc">Метод для получения списка друзей </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d3e/vkmodule_8py_source.html#l00023">vkmodule.py:23</a></div></div>
+<div class="ttc" id="namespacevkmodule_html_acefb28af1e50b99a5c189a164c690f6b"><div class="ttname"><a href="../../d4/d21/namespacevkmodule.html#acefb28af1e50b99a5c189a164c690f6b">vkmodule.vkfriends</a></div><div class="ttdeci">def vkfriends</div><div class="ttdoc">Метод для получения списка друзей </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d3e/vkmodule_8py_source.html#l00024">vkmodule.py:24</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a65e2080070f3b36ddf40e2b366a0ff5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def vkmodule.vknewmsg </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод для получения новых сообщений </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>Токен для ВК </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Список из новых сообщений вида [id_пользователя/диалога, сообщение] </dd></dl>
+
+<p>См. определение в файле <a class="el" href="../../d7/d3e/vkmodule_8py_source.html">vkmodule.py</a> строка <a class="el" href="../../d7/d3e/vkmodule_8py_source.html#l00050">50</a></p>
+
+<p>Используется в <a class="el" href="../../da/d6a/bot_8py_source.html#l00023">bot.sendmessage()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d4/d21/namespacevkmodule.html#a65e2080070f3b36ddf40e2b366a0ff5f">   50</a></span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">def </span><a class="code" href="../../d4/d21/namespacevkmodule.html#a65e2080070f3b36ddf40e2b366a0ff5f">vknewmsg</a>(token): <span class="comment"># TODO: получение нескольких сообщений от пользователя</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    response = requests.get(<span class="stringliteral">&quot;https://api.vk.com/method/messages.getDialogs?offset=0&amp;count=200&amp;access_token=&quot;</span>+str(token))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    arrayResp = json.loads(response.content.decode(<span class="stringliteral">&quot;UTF-8&quot;</span>))[<span class="stringliteral">&quot;response&quot;</span>]</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    msgs = []</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">for</span> item <span class="keywordflow">in</span> arrayResp: <span class="comment"># TODO: сделать анализ репостов</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> type(item) != int <span class="keywordflow">and</span> item[<span class="stringliteral">&quot;read_state&quot;</span>] == 0 <span class="keywordflow">and</span> item[<span class="stringliteral">&quot;out&quot;</span>] == 0:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            msgs.append([item[<span class="stringliteral">&quot;uid&quot;</span>],item[<span class="stringliteral">&quot;body&quot;</span>]])</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> msgs</div>
+</div>
+<div class="ttc" id="namespacevkmodule_html_a65e2080070f3b36ddf40e2b366a0ff5f"><div class="ttname"><a href="../../d4/d21/namespacevkmodule.html#a65e2080070f3b36ddf40e2b366a0ff5f">vkmodule.vknewmsg</a></div><div class="ttdeci">def vknewmsg</div><div class="ttdoc">Метод для получения новых сообщений </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d3e/vkmodule_8py_source.html#l00050">vkmodule.py:50</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a18fc6e5f11d931ffe498bb34500ae930"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def vkmodule.vksend </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод для отправки сообщения </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ID пользователя в ВК </td></tr>
+    <tr><td class="paramname">text</td><td>Текст сообщения </td></tr>
+    <tr><td class="paramname">token</td><td>Токен пользователя, от которого будет отправлено сообщение </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>См. определение в файле <a class="el" href="../../d7/d3e/vkmodule_8py_source.html">vkmodule.py</a> строка <a class="el" href="../../d7/d3e/vkmodule_8py_source.html#l00073">73</a></p>
+
+<p>Используется в <a class="el" href="../../da/d6a/bot_8py_source.html#l00023">bot.sendmessage()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../d4/d21/namespacevkmodule.html#a18fc6e5f11d931ffe498bb34500ae930">   73</a></span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">def </span><a class="code" href="../../d4/d21/namespacevkmodule.html#a18fc6e5f11d931ffe498bb34500ae930">vksend</a>(id,text,token):</div>
+  requests.get(<span class="stringliteral">&quot;https://api.vk.com/method/messages.send?user_id=&quot;</span>+str(id)+<span class="stringliteral">&quot;&amp;message=&quot;</span>+str(text)+<span class="stringliteral">&quot;&amp;access_token=&quot;</span>+str(token))<div class="ttc" id="namespacevkmodule_html_a18fc6e5f11d931ffe498bb34500ae930"><div class="ttname"><a href="../../d4/d21/namespacevkmodule.html#a18fc6e5f11d931ffe498bb34500ae930">vkmodule.vksend</a></div><div class="ttdeci">def vksend</div><div class="ttdoc">Метод для отправки сообщения </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d3e/vkmodule_8py_source.html#l00073">vkmodule.py:73</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -204,16 +342,18 @@ $(document).ready(function(){initNavTree('d4/d21/namespacevkmodule.html','../../
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>Список из 100 записей со стены пользователя со списками вида: [id_автора,текст_записи] </dd></dl>
 
-<p>См. определение в файле <a class="el" href="../../d7/d3e/vkmodule_8py_source.html">vkmodule.py</a> строка <a class="el" href="../../d7/d3e/vkmodule_8py_source.html#l00036">36</a></p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d4/d21/namespacevkmodule.html#a17e889ffb7473771c2cc771ab54c49b0">   36</a></span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">def </span><a class="code" href="../../d4/d21/namespacevkmodule.html#a17e889ffb7473771c2cc771ab54c49b0">vkwall</a>(user_id):</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    response = requests.get(<span class="stringliteral">&quot;https://api.vk.com/method/wall.get?offset=0&amp;owner_id=&quot;</span>+str(user_id)+<span class="stringliteral">&quot;&amp;count=100&amp;filter=owner&quot;</span>)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    arrayResp = json.loads(response.content.decode(<span class="stringliteral">&quot;UTF-8&quot;</span>))[<span class="stringliteral">&quot;response&quot;</span>]</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    wall = []</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">for</span> item <span class="keywordflow">in</span> arrayResp:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> type(item) != int <span class="keywordflow">and</span> str(item[<span class="stringliteral">&quot;text&quot;</span>]) != <span class="stringliteral">&quot;&quot;</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            wall.append([item[<span class="stringliteral">&quot;from_id&quot;</span>],item[<span class="stringliteral">&quot;text&quot;</span>]])</div>
- <span class="keywordflow">return</span> wall<div class="ttc" id="namespacevkmodule_html_a17e889ffb7473771c2cc771ab54c49b0"><div class="ttname"><a href="../../d4/d21/namespacevkmodule.html#a17e889ffb7473771c2cc771ab54c49b0">vkmodule.vkwall</a></div><div class="ttdeci">def vkwall</div><div class="ttdoc">Метод для получения записей со стены пользователей </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d3e/vkmodule_8py_source.html#l00036">vkmodule.py:36</a></div></div>
+<p>См. определение в файле <a class="el" href="../../d7/d3e/vkmodule_8py_source.html">vkmodule.py</a> строка <a class="el" href="../../d7/d3e/vkmodule_8py_source.html#l00037">37</a></p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d4/d21/namespacevkmodule.html#a17e889ffb7473771c2cc771ab54c49b0">   37</a></span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">def </span><a class="code" href="../../d4/d21/namespacevkmodule.html#a17e889ffb7473771c2cc771ab54c49b0">vkwall</a>(user_id):</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    response = requests.get(<span class="stringliteral">&quot;https://api.vk.com/method/wall.get?offset=0&amp;owner_id=&quot;</span>+str(user_id)+<span class="stringliteral">&quot;&amp;count=100&amp;filter=owner&quot;</span>)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    arrayResp = json.loads(response.content.decode(<span class="stringliteral">&quot;UTF-8&quot;</span>))[<span class="stringliteral">&quot;response&quot;</span>]</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    wall = []</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">for</span> item <span class="keywordflow">in</span> arrayResp:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> type(item) != int <span class="keywordflow">and</span> str(item[<span class="stringliteral">&quot;text&quot;</span>]) != <span class="stringliteral">&quot;&quot;</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            wall.append([item[<span class="stringliteral">&quot;from_id&quot;</span>],item[<span class="stringliteral">&quot;text&quot;</span>]])</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> wall</div>
+</div>
+<div class="ttc" id="namespacevkmodule_html_a17e889ffb7473771c2cc771ab54c49b0"><div class="ttname"><a href="../../d4/d21/namespacevkmodule.html#a17e889ffb7473771c2cc771ab54c49b0">vkmodule.vkwall</a></div><div class="ttdeci">def vkwall</div><div class="ttdoc">Метод для получения записей со стены пользователей </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d3e/vkmodule_8py_source.html#l00037">vkmodule.py:37</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pgmodule',['pgmodule',['../d7/d0f/namespacepgmodule.html',1,'']]]
+  ['config',['config',['../d6/d7f/namespaceconfig.html',1,'']]]
 ];

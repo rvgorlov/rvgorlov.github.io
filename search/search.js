@@ -7,12 +7,12 @@
 
 var indexSectionsWithContent =
 {
-  0: "$_degkoprtv",
+  0: "_bcdegikoprstuv",
   1: "eop",
-  2: "eptv",
-  3: "eprtv",
-  4: "_degtv",
-  5: "$eko",
+  2: "bceptv",
+  3: "bceprtv",
+  4: "_degstuv",
+  5: "bikotu",
   6: "r"
 };
 

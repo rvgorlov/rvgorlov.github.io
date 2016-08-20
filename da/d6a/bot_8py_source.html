@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>SocialCollectorBot: Исходный файл bot.py</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">SocialCollectorBot
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Бот для Telegram</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('da/d6a/bot_8py_source.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">bot.py</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/d6a/bot_8py.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="../../df/de0/namespacebot.html">    1</a></span>&#160;<span class="comment"># -*- coding: utf-8 -*-</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> config, telebot</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">from</span> telebot <span class="keyword">import</span> types</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> vkmodule</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> pgmodule</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">## </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"># \file </span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"># \brief Пример бота для работы с сообщениями из ВК</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"># \authors Борис Бочкарев http://vk.com/id23382988</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"># \version 0.1</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../df/de0/namespacebot.html#ab2d77766a66c1640c214911521d92428">   13</a></span>&#160;bot = telebot.TeleBot(config.token)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;@bot.message_handler(commands=[<span class="stringliteral">&quot;start&quot;</span>])</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../df/de0/namespacebot.html#ae77d7678e16d05e3fc55b768642e3864">   16</a></span>&#160;<span class="keyword">def </span><a class="code" href="../../df/de0/namespacebot.html#ae77d7678e16d05e3fc55b768642e3864">start</a>(message):</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    keys = types.ReplyKeyboardMarkup(one_time_keyboard=<span class="keyword">True</span>, resize_keyboard=<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    keys.add(<span class="stringliteral">&quot;Авторизация в ВК&quot;</span>)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    keys.add(<span class="stringliteral">&quot;Получить новые сообщения из ВК&quot;</span>)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    bot.send_message(message.chat.id, <span class="stringliteral">&quot;Ваш выбор?&quot;</span>, reply_markup=keys)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;@bot.message_handler(content_types=[<span class="stringliteral">&quot;text&quot;</span>])</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../df/de0/namespacebot.html#ac0439f69763aba03e71e3b22c702ef1b">   23</a></span>&#160;<span class="keyword">def </span><a class="code" href="../../df/de0/namespacebot.html#ac0439f69763aba03e71e3b22c702ef1b">sendmessage</a>(message):</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> message.text == <span class="stringliteral">&quot;Авторизация в ВК&quot;</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        bot.send_message(message.chat.id, <a class="code" href="../../d4/d21/namespacevkmodule.html#a77688bd07e405e44e1361263ed109894">vkmodule.vkauthstr</a>(message.chat.id))</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">elif</span> message.text == <span class="stringliteral">&quot;Получить новые сообщения из ВК&quot;</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment"># запрашиваем все сообщения -в_цикле- получаем фио пользователя - вормируем сообщение и отправляем</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        msgList = <a class="code" href="../../d4/d21/namespacevkmodule.html#a65e2080070f3b36ddf40e2b366a0ff5f">vkmodule.vknewmsg</a>(<a class="code" href="../../d7/d0f/namespacepgmodule.html#ade787b4c385e0f208b11eb004da1896b">pgmodule.getToken</a>(message.chat.id,<span class="stringliteral">&quot;vk&quot;</span>))</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        keys = types.ReplyKeyboardMarkup(one_time_keyboard=<span class="keyword">True</span>, resize_keyboard=<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">for</span> msg <span class="keywordflow">in</span> msgList:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            uid,body = msg[0],msg[1]</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            fio = <a class="code" href="../../d4/d21/namespacevkmodule.html#ab8cf385b420326d00168013f3e49c115">vkmodule.vkfio</a>(uid)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            Msg = fio + <span class="stringliteral">&quot;\n&quot;</span> + body</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            bot.send_message(message.chat.id, Msg)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            keys.add(<span class="stringliteral">&quot;ID: &quot;</span>+str(uid)+<span class="stringliteral">&quot; | &quot;</span>+fio)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        bot.send_message(message.chat.id, <span class="stringliteral">&quot;Кому ответить?&quot;</span>, reply_markup=keys)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">elif</span> message.text.find(<span class="stringliteral">&quot;https://oauth.vk.com/blank.html&quot;</span>) != -1: <span class="comment"># если пришла ссылка с авторизацией</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        token = message.text.split(<span class="stringliteral">&quot;#&quot;</span>)[1].split(<span class="stringliteral">&quot;&amp;&quot;</span>)[0].split(<span class="stringliteral">&quot;=&quot;</span>)[1]</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        print(token)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../d7/d0f/namespacepgmodule.html#a5a1b000f3798f2334a16963ddf3d0f3d">pgmodule.updateToken</a>(message.chat.id,token)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        bot.send_message(message.chat.id, <span class="stringliteral">&quot;Авторизация в ВК прошла успешно!&quot;</span>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment"># клавиатура с меню</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        keys = types.ReplyKeyboardMarkup(one_time_keyboard=<span class="keyword">True</span>, resize_keyboard=<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        keys.add(<span class="stringliteral">&quot;Авторизация в ВК&quot;</span>)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        keys.add(<span class="stringliteral">&quot;Получить новые сообщения из ВК&quot;</span>)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        bot.send_message(message.chat.id, <span class="stringliteral">&quot;Ваш выбор?&quot;</span>, reply_markup=keys)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">elif</span> message.text.find(<span class="stringliteral">&quot;ID: &quot;</span>) != -1 <span class="keywordflow">and</span> message.text.find(<span class="stringliteral">&quot; | &quot;</span>) != -1:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        Id = message.text.split(<span class="stringliteral">&quot; &quot;</span>)[1]</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="../../d7/d0f/namespacepgmodule.html#a3c3852c48dbf74c9aa95083d0bfaa9bd">pgmodule.saveID</a>(message.chat.id,Id)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">else</span>: </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        user_id = <a class="code" href="../../d7/d0f/namespacepgmodule.html#a4a48c5540e9f664dd22b54309d7a2bdd">pgmodule.getID</a>(message.chat.id)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../d7/d0f/namespacepgmodule.html#ae113bd791aee7bbca0a19c2e38e95461">pgmodule.delID</a>(message.chat.id,user_id)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="../../d4/d21/namespacevkmodule.html#a18fc6e5f11d931ffe498bb34500ae930">vkmodule.vksend</a>(user_id,message.text,<a class="code" href="../../d7/d0f/namespacepgmodule.html#ade787b4c385e0f208b11eb004da1896b">pgmodule.getToken</a>(message.chat.id,<span class="stringliteral">&#39;vk&#39;</span>))</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment"># клавиатура с меню</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        keys = types.ReplyKeyboardMarkup(one_time_keyboard=<span class="keyword">True</span>, resize_keyboard=<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        keys.add(<span class="stringliteral">&quot;Авторизация в ВК&quot;</span>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        keys.add(<span class="stringliteral">&quot;Получить новые сообщения из ВК&quot;</span>)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        bot.send_message(message.chat.id, <span class="stringliteral">&quot;Ваш выбор?&quot;</span>, reply_markup=keys)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordflow">if</span> __name__ == <span class="stringliteral">&#39;__main__&#39;</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    bot.polling(none_stop=<span class="keyword">True</span>)</div>
+<div class="ttc" id="namespacevkmodule_html_ab8cf385b420326d00168013f3e49c115"><div class="ttname"><a href="../../d4/d21/namespacevkmodule.html#ab8cf385b420326d00168013f3e49c115">vkmodule.vkfio</a></div><div class="ttdeci">def vkfio</div><div class="ttdoc">Метод для получения Ф. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d3e/vkmodule_8py_source.html#l00063">vkmodule.py:63</a></div></div>
+<div class="ttc" id="namespacepgmodule_html_ae113bd791aee7bbca0a19c2e38e95461"><div class="ttname"><a href="../../d7/d0f/namespacepgmodule.html#ae113bd791aee7bbca0a19c2e38e95461">pgmodule.delID</a></div><div class="ttdeci">def delID</div><div class="ttdoc">Метод для удаления ID того, кому отвечали </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d0f/pgmodule_8py_source.html#l00052">pgmodule.py:52</a></div></div>
+<div class="ttc" id="namespacepgmodule_html_a5a1b000f3798f2334a16963ddf3d0f3d"><div class="ttname"><a href="../../d7/d0f/namespacepgmodule.html#a5a1b000f3798f2334a16963ddf3d0f3d">pgmodule.updateToken</a></div><div class="ttdeci">def updateToken</div><div class="ttdoc">Метод для обновления токена </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d0f/pgmodule_8py_source.html#l00030">pgmodule.py:30</a></div></div>
+<div class="ttc" id="namespacevkmodule_html_a77688bd07e405e44e1361263ed109894"><div class="ttname"><a href="../../d4/d21/namespacevkmodule.html#a77688bd07e405e44e1361263ed109894">vkmodule.vkauthstr</a></div><div class="ttdeci">def vkauthstr</div><div class="ttdoc">Метод генерации ссылки для авторизации в ВК </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d3e/vkmodule_8py_source.html#l00014">vkmodule.py:14</a></div></div>
+<div class="ttc" id="namespacevkmodule_html_a65e2080070f3b36ddf40e2b366a0ff5f"><div class="ttname"><a href="../../d4/d21/namespacevkmodule.html#a65e2080070f3b36ddf40e2b366a0ff5f">vkmodule.vknewmsg</a></div><div class="ttdeci">def vknewmsg</div><div class="ttdoc">Метод для получения новых сообщений </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d3e/vkmodule_8py_source.html#l00050">vkmodule.py:50</a></div></div>
+<div class="ttc" id="namespacepgmodule_html_a4a48c5540e9f664dd22b54309d7a2bdd"><div class="ttname"><a href="../../d7/d0f/namespacepgmodule.html#a4a48c5540e9f664dd22b54309d7a2bdd">pgmodule.getID</a></div><div class="ttdeci">def getID</div><div class="ttdoc">Метод для получения ID того, кому отвечаем </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d0f/pgmodule_8py_source.html#l00063">pgmodule.py:63</a></div></div>
+<div class="ttc" id="namespacebot_html_ac0439f69763aba03e71e3b22c702ef1b"><div class="ttname"><a href="../../df/de0/namespacebot.html#ac0439f69763aba03e71e3b22c702ef1b">bot.sendmessage</a></div><div class="ttdeci">def sendmessage</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/bot_8py_source.html#l00023">bot.py:23</a></div></div>
+<div class="ttc" id="namespacebot_html_ae77d7678e16d05e3fc55b768642e3864"><div class="ttname"><a href="../../df/de0/namespacebot.html#ae77d7678e16d05e3fc55b768642e3864">bot.start</a></div><div class="ttdeci">def start</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/bot_8py_source.html#l00016">bot.py:16</a></div></div>
+<div class="ttc" id="namespacevkmodule_html_a18fc6e5f11d931ffe498bb34500ae930"><div class="ttname"><a href="../../d4/d21/namespacevkmodule.html#a18fc6e5f11d931ffe498bb34500ae930">vkmodule.vksend</a></div><div class="ttdeci">def vksend</div><div class="ttdoc">Метод для отправки сообщения </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d3e/vkmodule_8py_source.html#l00073">vkmodule.py:73</a></div></div>
+<div class="ttc" id="namespacepgmodule_html_ade787b4c385e0f208b11eb004da1896b"><div class="ttname"><a href="../../d7/d0f/namespacepgmodule.html#ade787b4c385e0f208b11eb004da1896b">pgmodule.getToken</a></div><div class="ttdeci">def getToken</div><div class="ttdoc">Метод для получения токена </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d0f/pgmodule_8py_source.html#l00015">pgmodule.py:15</a></div></div>
+<div class="ttc" id="namespacepgmodule_html_a3c3852c48dbf74c9aa95083d0bfaa9bd"><div class="ttname"><a href="../../d7/d0f/namespacepgmodule.html#a3c3852c48dbf74c9aa95083d0bfaa9bd">pgmodule.saveID</a></div><div class="ttdeci">def saveID</div><div class="ttdoc">Метод для сохранения ID того, кому собираемся отвечать </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d0f/pgmodule_8py_source.html#l00041">pgmodule.py:41</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../da/d6a/bot_8py.html">bot.py</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>
